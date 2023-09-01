@@ -1,0 +1,112 @@
+<app-nav-menu></app-nav-menu>
+<div style="display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 20px;">
+  <div style="display: flex; flex-direction: row; align-items: center;">
+    <span style="font-size: 25px;">User List</span>
+  
+    <button mat-stroked-button (click)="showCard = !showCard" style="margin-left: 20px; border-radius: 8px; color: #46bbfa;"><mat-icon>filter_list</mat-icon><span style="padding-left: 10px;">Filter</span></button>
+    <!--<button mat-stroked-button (click)="showCard = !showCard" style="margin-left: 20px; border-radius: 8px; color: #46bbfa;"><mat-icon>filter_list</mat-icon><span style="padding-left: 10px;">Filter</span></button>-->
+  </div>
+  <div style="display: flex; flex-direction: row; ">
+
+  </div>
+  <div style="display: flex; flex-direction: row; ">
+
+  </div>
+</div>
+
+
+
+<mat-card class="example-card" style="display: flex; flex-direction: row; margin-bottom: 10px; width: 100%; justify-content: space-between;" [style.display]="showCard ? 'block' : 'none'">
+  <mat-card-header style="display: flex; flex-direction: row; ">
+   
+      <div style="display: flex; flex-direction: row; justify-content: space-between">
+        <div style="display: flex; flex-direction: row; gap: 10px;">
+          <mat-form-field>
+            <label>User Name</label>
+            <input type="text" matInput  [(ngModel)]="userName" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+        </div>
+        <div style="padding-top: 26px;">
+          <button (click)="onFilterSubmit()" type="submit"  mat-mini-fab matTooltip="filter" style="background-color: #0F9E33; margin-right: 10px;" aria-label="Example mini fab with a heart icon">
+            <mat-icon>done</mat-icon>
+          </button>
+          <button mat-mini-fab (click)="showCard = !showCard" matTooltip="close" style="background-color: #FF5C5C;" aria-label="Example mini fab with a heart icon">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </div>
+   
+
+  </mat-card-header>
+</mat-card>
+
+
+<div style="  margin: 20px;">
+
+
+  <div class="mat-elevation-z8">
+  
+    <table mat-table [dataSource]="dataSource" matSort>
+     
+
+      <ng-container matColumnDef="userName">
+
+        <th mat-header-cell class="custom-header-assetCode text-lg" *matHeaderCellDef mat-sort-header> <b>User Name</b> </th>
+        <td mat-cell class="custom-cell-assetCode" *matCellDef="let user">  <b>{{user.userName}} </b></td>
+      </ng-container>
+
+      <ng-container matColumnDef="role">
+        <th mat-header-cell class="custom-header-assetType text-lg" *matHeaderCellDef mat-sort-header>Role</th>
+        <td mat-cell class="custom-cell-assetType" *matCellDef="let user"> {{user.role}} </td>
+      </ng-container>
+
+    
+      <ng-container matColumnDef="isLockedOut">
+
+        <th mat-header-cell class="custom-header-assetName text-lg" *matHeaderCellDef mat-sort-header>Lock</th>
+        <td mat-cell class="custom-cell-assetName" *matCellDef="let user">
+          {{ user.isLockedOut ? 'Lock' : 'Unlock' }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="action">
+        <th mat-header-cell class="custom-header-action text-lg" *matHeaderCellDef> Account Lock </th>
+        <td mat-cell class="custom-cell-action" *matCellDef="let user">
+
+          <button mat-icon-button color="primary" (click)="editUser(user.membershipId,true)">
+            Enable
+          </button>
+          <span class="button-gap"></span>
+          <button mat-icon-button color="primary" (click)="editUser(user.membershipId,false)">
+
+            Disable
+          </button>
+
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons>
+    </mat-paginator>
+
+  </div>
+</div>
+
+<style>
+  .mat-form-field-infix {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .table th {
+    font-weight: 500 !important;
+    font-size: 17px;
+  }
+</style>
+
+
+

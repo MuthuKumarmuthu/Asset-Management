@@ -1,0 +1,43 @@
+<div class="loginpage">
+  <div class="logincard">
+
+    <div class="w-full flex flex-row">
+      <div class="left-side-login w-6/12 bg-[#3db6fc;]">
+
+      </div>
+      <div  class="right-side-login  w-6/12">
+        <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()" class="login-form flex flex-col space-between">
+         
+          <span class="text-[#1f61a3] text-[24px] font-semibold">Login in to your account</span>
+          <div class="login-input gap-3">
+
+            <div class="flex flex-col gap-1">
+              <label for="userName text-[#747474]">User Name</label>
+              <input type="text" id="userName" name="userName" formControlName="userName" required>
+              <span class="custom" *ngIf="loginForm?.get('userName')?.invalid && (loginForm?.get('userName')?.dirty || loginForm?.get('userName')?.touched)">
+                <span class="custom" *ngIf="loginForm?.get('userName')?.errors?.['required']">User Name is required.</span>
+
+              </span>
+
+            </div>
+            <div class="flex flex-col gap-1 mt-6">
+              <label for="password text-[#747474]">Password</label>
+              <input type="password" id="password" name="password" formControlName="password" required>
+              <span class="custom" *ngIf="loginForm?.get('password')?.invalid && (loginForm?.get('password')?.dirty || loginForm?.get('password')?.touched)">
+                <span class="custom" *ngIf="loginForm?.get('password')?.errors?.['required']">Password is required.</span>
+              </span>
+            </div>
+          </div>
+          <div class="flex justify-start items-center login-btn">
+            <button mat-raised-button class="bg-[#3db6fc;] text-white flex flex-row" type="submit" [disabled]="loginForm.invalid"><span>Login</span></button>
+          
+          </div>
+       
+        </form>
+      </div>
+    </div>
+    <div>
+    </div>
+  </div>
+</div>
+

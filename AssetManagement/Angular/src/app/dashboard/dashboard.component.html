@@ -1,0 +1,133 @@
+<app-nav-menu></app-nav-menu>
+<div *ngIf="role=='SADMIN'" style=" margin-bottom: 20px;">
+  <div style="display: flex; flex-direction: row; align-items: center;">
+    <span style="font-size: 25px; padding: 25px; margin-left: 180px;">Dashboard</span>
+    <!--<button mat-stroked-button (click)="showCard = !showCard" style="margin-left: 20px; border-radius: 8px; color: #46bbfa;"><mat-icon>filter_list</mat-icon><span style="padding-left: 10px;">Filter</span></button>-->
+  </div>
+
+  <div style="display: flex; justify-content: center;">
+    <div style="display: flex; flex-direction: column;">
+    
+      <div style="display: flex; flex-direction: row; gap: 30px;">
+        <div>
+          <mat-card class="example-card" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); color: #fff; width: 300px; height: 150px;">
+            <mat-card-header>
+              <mat-card-title>Number of Assets</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h2 style="padding-left: 20px; font-size: 40px; float: right; padding-top: 30px;">{{asset?.assetno}}</h2>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div>
+          <mat-card class="example-card" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); color: #fff; width: 300px; height: 150px;">
+            <mat-card-header>
+              <mat-card-title>Number of Asset Types</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h2 style="padding-left: 20px; font-size: 40px; float: right; padding-top: 30px;">{{asset?.assetType}}</h2>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div>
+          <mat-card class="example-card" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); color: #fff; width: 300px; height: 150px;">
+            <mat-card-header>
+              <mat-card-title>Number of Admin</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h2 style="padding-left: 20px; font-size: 40px; float: right; padding-top: 30px;">{{asset?.admin}}</h2>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: row; gap: 30px; padding-top: 50px;">
+        <div>
+          <mat-card class="example-card" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); color: #fff; width: 300px; height: 150px;">
+            <mat-card-header>
+              <mat-card-title>Number of Staffs</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h2 style="padding-left: 20px; font-size: 40px; float: right; padding-top: 30px;">{{asset?.staffs}}</h2>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div>
+          <mat-card class="example-card" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); color: #fff; width: 300px; height: 150px;">
+            <mat-card-header>
+              <mat-card-title>Number of owner</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h2 style="padding-left: 20px; font-size: 30px; float: right; padding-top: 30px;">{{asset?.owner}} </h2>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div>
+          <mat-card class="example-card" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); color: #fff; width: 300px; height: 150px;">
+            <mat-card-header>
+              <mat-card-title>Number of Vendor</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h2 style="padding-left: 20px; font-size: 30px; float: right; padding-top: 30px;">{{asset?.vendor}} </h2>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="role=='ADMIN'" style=" margin-bottom: 20px;">
+  <div style="display: flex; flex-direction: row; align-items: center;">
+    <span style="font-size: 25px; padding: 25px; ">Dashboard</span>
+    <!--<button mat-stroked-button (click)="showCard = !showCard" style="margin-left: 20px; border-radius: 8px; color: #46bbfa;"><mat-icon>filter_list</mat-icon><span style="padding-left: 10px;">Filter</span></button>-->
+  </div>
+
+  <div style="display: flex; justify-content: center;">
+    <div style="display: flex; flex-direction: column;">
+      <!--<h2>Assets</h2>-->
+      <div style="display: flex; flex-direction: row; gap: 30px;">
+        <div>
+          <mat-card class="example-card" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); color: #fff; width: 300px; height: 150px;">
+            <mat-card-header>
+              <mat-card-title>Number of Assets</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h2 style="padding-left: 20px; font-size: 40px; float: right; padding-top: 30px;">{{asset?.assetno}}</h2>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div>
+          <mat-card class="example-card" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); color: #fff; width: 300px; height: 150px;">
+            <mat-card-header>
+              <mat-card-title>Number of Asset Types</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h2 style="padding-left: 20px; font-size: 40px; float: right; padding-top: 30px;">{{asset?.assetType}}</h2>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div>
+          <mat-card class="example-card" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); color: #fff; width: 300px; height: 150px;">
+            <mat-card-header>
+              <mat-card-title>Number of Staffs</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h2 style="padding-left: 20px; font-size: 40px; float: right; padding-top: 30px;">{{asset?.staffs}}</h2>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div>
+          <mat-card class="example-card" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); color: #fff; width: 300px; height: 150px;">
+            <mat-card-header>
+              <mat-card-title>Number of the Owner</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h2 style="padding-left: 20px; font-size: 30px; float: right; padding-top: 30px;">{{asset?.owner}} </h2>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

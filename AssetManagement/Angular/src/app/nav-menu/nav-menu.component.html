@@ -1,0 +1,60 @@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div style="max-width:100%; margin: 0 auto;">
+      <div style="display: flex; flex-direction: row;gap:50px; padding: 15px 10px; width:100%; }">
+       
+        <div style="display: flex; flex-direction: row;margin-left:200px;gap:30px;">
+          <button mat-raised-button [routerLink]="['/dashboard']" *ngIf="role=='SADMIN'|| role=='ADMIN'" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); margin-left: 20px; border-radius: 8px; color: #fff">
+            Dashboard
+          </button>
+          <button mat-raised-button [routerLink]="['/User-list']" *ngIf="role=='SADMIN'" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); margin-left: 20px; border-radius: 8px; color: #fff">
+            User List
+          </button>
+          <button mat-raised-button *ngIf="role=='ADMIN'" [routerLink]="['/Asset-list']" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); margin-right: 20px;  border-radius: 8px; color: #fff">
+         
+            Asset List
+          </button>
+          <button mat-raised-button [routerLink]="['/signup']" *ngIf="role=='SADMIN'" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); margin-left: 20px; border-radius: 8px; color: #fff">
+            Add User
+          </button>
+          <button mat-raised-button [routerLink]="['/vendor']" *ngIf="role=='SADMIN'" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); margin-left: 20px; border-radius: 8px; color: #fff">
+            Add Vendor
+          </button>
+
+          <button mat-raised-button *ngIf="role=='ADMIN'" [routerLink]="['/Create-asset']" style="background: linear-gradient(98.63deg, #5CC5F9 3.31%, #30B0FC 100%); margin-right: 20px;  border-radius: 8px; color: #fff">
+            <mat-icon style="padding-right: 10px">add_circle_outline</mat-icon>
+            Add Assets
+          </button>
+
+        </div>
+
+        <div style="display: flex; flex-direction: row; ">
+
+        
+        </div>
+        <div style="display: flex; flex-direction: row; ">
+        </div>
+        <div style="display: flex; flex-direction: row; ">
+          <div style="padding-right:20px;color:gray">
+            <div style="display:flex;flex-direction:row;">
+              <mat-icon style="color:blueviolet">account_circle  </mat-icon>{{userName}}
+            
+            </div>
+            <div style="display: flex; flex-direction: row; margin-left: 25px">
+              {{role}}
+              </div>
+            </div>
+            <button mat-raised-button *ngIf="storedId; else emptyButton" color="warn" (click)="logout()">
+              <mat-icon>open_in_new</mat-icon>Sign Out
+            </button>
+            <ng-template #emptyButton>
+              <button mat-raised-button color="warn" [routerLink]="['/']">
+                <mat-icon>open_in_new</mat-icon>Sign In
+              </button>
+            </ng-template>
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+

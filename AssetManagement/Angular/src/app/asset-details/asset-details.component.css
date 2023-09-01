@@ -1,0 +1,14 @@
+.asset-detials-header {
+  background: linear-gradient(89.96deg, #65CAF9 -7.82%, #14A2FE 124.35%) !important;
+  width: 1000px;
+  padding-left: -20px !important;
+  position: relative;
+  left: -24px;
+  top: -24px;
+  height: 100px;
+}
+
+.close-btn {
+  right: 20px;
+  font-size: 25px !important;
+}/*# sourceMappingURL=asset-details.component.css.map */

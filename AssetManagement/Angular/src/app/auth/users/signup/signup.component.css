@@ -1,0 +1,146 @@
+/* Default styles */
+.loginpage {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.logincard {
+  width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 950px;
+}
+
+.login-form {
+  width: 80%;
+  height: 350px;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.login-input input,
+.login-input select,
+.login-input textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 300px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .logincard {
+    width: 800px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logincard {
+    width: 600px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .login-form {
+    width: 100%;
+  }
+
+  .create-btn {
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logincard {
+    width: 100%;
+  }
+}
+
+/* Additional responsive styles can be added as needed for smaller screens */
+
+
+
+/*.loginpage {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.login-form {
+  width: 80%;
+  height: 350px;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.login-input input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 300px;
+}
+
+td {
+  padding-right: 8px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 300px;
+}
+
+.logincard {
+  width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 950px;
+}
+
+.right-side-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-side-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-btn {
+  position: relative;
+  top: -20px;
+}
+*/

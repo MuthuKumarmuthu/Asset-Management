@@ -1,0 +1,330 @@
+<div class="create-form">
+  <div class="close-btn-container">
+    <button class="relative close-btn" mat-button-icon (click)="close()"><mat-icon class="">highlight_off</mat-icon></button>
+  </div>
+  <h2>Edit Asset Details</h2>
+
+  <div mat-dialog-content style="display: flex; flex-direction: column;">
+
+    <div class="login-input-container-single">
+      <div class="login-input">
+
+      </div>
+    </div>
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>Asset Name</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.name" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>Asset Code</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.code" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>Description</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.description" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>Asset Type</label>
+          <select required [(ngModel)]="assetfiles.assetTypeId">
+            <option *ngFor="let asset of assetTypeList" [value]="asset.assetTypeId">
+              {{asset.assetTypeDescription}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-input-container-single">
+      <div class="login-input">
+        <div class="flex flex-col ">
+          <label>Asset status</label>
+          <div class="checkbox-input">
+            <input type="checkbox"  [(ngModel)]="assetfiles.status">
+            <label for="status">Is Working</label>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label> Department</label>
+          <select [(ngModel)]="assetfiles.departmentId">
+            <option *ngFor="let depart of departmentList" [value]="depart.departmentId">
+              {{depart.departmentDescription}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>Vendor Name</label>
+          <select [(ngModel)]="assetfiles.vendorId">
+            <option *ngFor="let vendor of vendorlist" [value]="vendor.vendorId">
+              {{vendor.vendorName}}
+          </select>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>Owner Name</label>
+          <select [(ngModel)]="assetfiles.ownerId">
+            <option *ngFor="let owner of ownerList" [value]="owner.ownerId">
+              {{owner.ownerName}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>Name Of User</label>
+          <select [(ngModel)]="assetfiles.userId">
+            <option *ngFor="let user of userList" [value]="user.userId">
+              {{user.userName}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>Make</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.make" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>Model</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.model" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>Memory</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.memory" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>storage</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.storage" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+    </div>
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>Processor</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.processor" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>Operating System</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.operatingSystem" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+    </div>
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>Ip Address</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.ipaddress" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>Serial Number</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.serialNumber" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>Purchase Date</label>
+          <input type="date" [(ngModel)]="assetfiles.purchaseDate" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>Insurance Details</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.insuranceDetails" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>Licence Details</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.licenceDetails" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>Licence Expiry</label>
+          <input type="date" [(ngModel)]="assetfiles.licenceExpiry" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>Invoice Number</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.invoiceNumber" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>AMC</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.amc" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>Warranty</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.warranty" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>Remarks</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.remarks" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="login-input-container-single">
+
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>Location</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.location" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>ToolName</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.toolName" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>toolSerialNo</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.toolSerialNo" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="login-input-container">
+      <div class="login-input">
+
+        <div class="flex flex-col ">
+          <label>Internal</label>
+          <div class="checkbox-input">
+            <input type="checkbox"  [(ngModel)]="assetfiles.isInternal" [ngModelOptions]="{standalone: true}" />
+            <label for="isInternal">Is Internal</label>
+          </div>
+         
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col">
+          <label>Keys</label>
+          <input type="text" class="custom-styling" [(ngModel)]="assetfiles.keys" [ngModelOptions]="{standalone: true}" />
+        </div>
+      </div>
+    </div>
+    <div class="login-input-container">
+      <div class="login-input">
+        <div class="flex flex-col ">
+          <label>Tool status</label>
+          <div class="checkbox-input">
+            <input type="checkbox"  [(ngModel)]="assetfiles.toolStatus">
+            <label for="toolStatus">Is Working</label>
+          </div>
+        </div>
+      </div>
+      <div class="login-input">
+        <div class="flex flex-col ">
+          <label>Tool Active</label>
+          <div class="checkbox-input">
+            <input type="checkbox" [(ngModel)]="assetfiles.active">
+            <label for="active">Is Active</label>
+          </div>
+        
+        </div>
+      </div>
+
+    </div>
+    <div mat-dialog-actions style="justify-content:center">
+      <button style="color: #fff; background-color: #17b0ff;" mat-button (click)="save()">Save</button>
+      <button color="warn" mat-button (click)="cancel()">Cancel</button>
+    </div>
+
+  </div>
+  </div>
+
+

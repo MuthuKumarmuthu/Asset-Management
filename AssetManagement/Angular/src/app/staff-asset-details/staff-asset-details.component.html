@@ -1,0 +1,176 @@
+<div class="h-full create-form">
+
+  <div class="close-btn-container">
+    <button class="relative close-btn" mat-button-icon (click)="close()"><mat-icon class="">highlight_off</mat-icon></button>
+  </div>
+  <h2>Asset Details</h2>
+
+  <div class="flex flex-col gap-3">
+  
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-12 w-6/12">
+        <span class="text-[#24aafd] text-lg font-medium">Asset Name </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.name}}</span>
+      </div>
+      <div class="flex flex-col h-12 w-6/12">
+        <span class="text-[#24aafd] text-lg font-medium">Asset code </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.code}}</span>
+      </div>
+    </div>
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-12 w-6/12">
+        <span class="text-[#24aafd] text-lg font-medium">Description </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.description}}</span>
+      </div>
+      <div class="flex flex-col h-12 w-6/12">
+        <span class="text-[#24aafd] text-lg font-medium">Asset Type </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.assetType}}</span>
+      </div>
+    </div>
+
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-12 w-6/12">
+        <span class="text-[#24aafd] text-lg font-medium">Asset Status </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.status?'Working':'Not Working'}}</span>
+      </div>
+    </div>
+
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-12 w-6/12">
+        <span class="text-[#24aafd] text-lg font-medium">Department </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.department}}</span>
+      </div>
+      <div class="flex flex-col h-12 w-6/12">
+        <span class="text-[#24aafd] text-lg font-medium">Vendor Name</span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.vendor}}</span>
+      </div>
+    </div>
+    <div class="flex flex-row w-full">
+
+      <div class="flex flex-col h-12 w-6/12">
+        <span class="text-[#24aafd] text-lg font-medium">Owner Name</span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.owner}}</span>
+      </div>
+      <div class="flex flex-col h-16 w-6/12">
+        <span class="text-[#24aafd] text-lg font-medium">Name Of User </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.user}}</span>
+      </div>
+    </div>
+
+
+
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-16 w-full">
+        <span class="text-[#24aafd] text-lg font-medium">make </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.make}}</span>
+      </div>
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Model</span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.model}}</span>
+      </div>
+    </div>
+
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Memory </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.memory}}</span>
+      </div>
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Storage </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.storage}}</span>
+      </div>
+
+    </div>
+
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Processor </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.processor}}</span>
+      </div>
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Operating System </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.operatingSystem}}</span>
+      </div>
+
+    </div>
+
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Ip Address </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.ipaddress}}</span>
+      </div>
+      <div class="flex flex-col h-16 w-full">
+        <span class="text-[#24aafd] text-lg font-medium"> SerialNumber </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.serialNumber}}</span>
+      </div>
+    </div>
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">PurchaseDate </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.purchaseDate}}</span>
+      </div>
+
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Insurance Details </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.insuranceDetails}}</span>
+      </div>
+    </div>
+
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Licence Details </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.licenceDetails}}</span>
+      </div>
+
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Licence Expiry </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.licenceExpiry}}</span>
+      </div>
+    </div>
+
+
+    <div class="flex flex-row w-full">
+
+
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Invoice Number </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.invoiceNumber}}</span>
+      </div>
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">AMC </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.amc}}</span>
+      </div>
+    </div>
+
+    <div class="flex flex-row w-full">
+
+
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Warranty </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.warranty}}</span>
+      </div>
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Remarks </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.remarks}}</span>
+      </div>
+    </div>
+
+
+    <div class="flex flex-row w-full">
+
+
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Location </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.location}}</span>
+      </div>
+    </div>
+
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Tool Name </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.toolName}}</span>
+      </div>
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">isInternal </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.isInternal?'Yes':'No'}}</span>
+      </div>
+
+
+
+
+    </div>
+
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">toolSerialNo </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.toolSerialNo}}</span>
+      </div>
+
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">Keys </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.keys}}</span>
+      </div>
+    </div>
+
+    <div class="flex flex-row w-full">
+      <div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">toolStatus </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.toolStatus?'Working':'Not Working'}}</span>
+      </div>
+
+      <!--<div class="flex flex-col h-16  w-full">
+        <span class="text-[#24aafd] text-lg font-medium">active </span><span class="text-base text-[#6A6A6A]">{{Viewassetfiles.active}}</span>
+      </div>-->
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,377 @@
+<app-nav-menu></app-nav-menu>
+
+<form [formGroup]="assetForm" (ngSubmit)="onSubmit()" style=" display: flex; flex-direction: column;">
+  <div class="loginpage">
+    <div class="logincard">
+      <div div class="flex flex-col " style=" justify-content:center;margin-top:30px;">
+        <div  class="text-[#1f61a3] text-[24px] font-semibold">Register Asset</div>
+      </div>
+    
+      <div class="row-container">
+        <div class="login-input">
+
+          <div class="flex flex-col ">
+            <label>Asset Name<sup style="color:red;">*</sup></label>
+            <input type="text" class="custom-styling" formControlName="name" required />
+
+            <span *ngIf="assetForm?.get('name')?.invalid && (assetForm?.get('name')?.dirty || assetForm?.get('name')?.touched)">
+              <span *ngIf="assetForm?.get('name')?.errors?.['required']">Asset Name is required</span>
+            </span>
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>Asset Code<sup style="color:red;">*</sup></label>
+            <input type="text" class="custom-styling" formControlName="code" required />
+            <span *ngIf="assetForm?.get('code')?.invalid && (assetForm?.get('code')?.dirty || assetForm?.get('code')?.touched)">
+              <span *ngIf="assetForm?.get('code')?.errors?.['required']">Asset Code is required</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+
+          <div class="flex flex-col ">
+
+            <label>Asset Description</label>
+            <input type="text" class="custom-styling" formControlName="description" >
+            <!--<span *ngIf="assetForm?.get('description')?.invalid && (assetForm?.get('description')?.dirty || assetForm?.get('description')?.touched)">
+              <span *ngIf="assetForm?.get('description')?.errors?.['required']">Asset Description is required</span>
+            </span>-->
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label for="AssetTypeId"> Asset Type<sup style="color:red;">*</sup></label>
+            <select required formControlName="assetTypeId">
+              <option value="">Select Asset Type</option>
+              <option *ngFor="let asset of assetTypeList" [value]="asset.assetTypeId">
+                {{asset.assetTypeDescription}}
+              </option>
+            </select>
+            <span *ngIf="assetForm?.get('assetTypeId')?.invalid && (assetForm?.get('assetTypeId')?.dirty || assetForm?.get('assetTypeId')?.touched)">
+              <span *ngIf="assetForm?.get('assetTypeId')?.errors?.['required']">Asset Type is required</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="single-container">
+        <div class="login-input">
+          <div class="flex flex-col ">
+            <label>Asset status<sup style="color:red;">*</sup></label>
+            <div class="checkbox-input">
+              <input type="checkbox" formControlName="status">
+              <label for="status">Is Working</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+          <div class="flex flex-col ">
+            <label for="departmentId">Department</label>
+            <select formControlName="departmentId">
+              <option value="">Select Department</option>
+              <option *ngFor="let depart of departmentList" [value]="depart.departmentId">
+                {{depart.departmentDescription}}
+              </option>
+            </select>
+            <span *ngIf="assetForm?.get('departmentId')?.invalid && (assetForm?.get('departmentId')?.dirty || assetForm?.get('departmentId')?.touched)">
+              <span *ngIf="assetForm?.get('departmentId')?.errors?.['required']">Asset Type is required</span>
+            </span>
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label for="vendorId">Vendor Name</label>
+            <select formControlName="vendorId">
+              <option value="">Select Vendor Name</option>
+              <option *ngFor="let vendor of vendorlist" [value]="vendor.vendorId">
+                {{vendor.vendorName}}
+              </option>
+            </select>
+            <span *ngIf="assetForm?.get('vendorId')?.invalid && (assetForm?.get('vendorId')?.dirty || assetForm?.get('vendorId')?.touched)">
+              <span *ngIf="assetForm?.get('vendorId')?.errors?.['required']"> vendor Name is required</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+
+          <div class="flex flex-col ">
+            <label for="ownerId">Owner Name</label>
+
+            <select formControlName="ownerId">
+              <option value="">Select Owner Name</option>
+              <option *ngFor="let owner of ownerList" [value]="owner.ownerId">
+                {{owner.ownerName}}
+              </option>
+            </select>
+
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+
+            <label for="userId">Name Of User</label>
+            <select formControlName="userId">
+              <option value="">Select Name Of User</option>
+              <option *ngFor="let user of userList" [value]="user.userId">
+                {{user.userName}}
+              </option>
+            </select>
+            <span *ngIf="assetForm?.get('userId')?.invalid && (assetForm?.get('userId')?.dirty || assetForm?.get('userId')?.touched)">
+              <span *ngIf="assetForm?.get('userId')?.errors?.['required']"> Name Of User is required</span>
+            </span>
+
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+          <div class="flex flex-col ">
+            <label>Make</label>
+            <input type="text" class="custom-styling" formControlName="make"  />
+            <!--<span *ngIf="assetForm?.get('make')?.invalid && (assetForm?.get('make')?.dirty || assetForm?.get('make')?.touched)">
+              <span *ngIf="assetForm?.get('make')?.errors?.['required']">Asset Code is required</span>
+            </span>-->
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>Asset Model</label>
+            <input type="text" class="custom-styling" formControlName="model" >
+            <!--<span *ngIf="assetForm?.get('model')?.invalid && (assetForm?.get('model')?.dirty || assetForm?.get('model')?.touched)">
+              <span *ngIf="assetForm?.get('model')?.errors?.['required']">Asset Details is required</span>
+            </span>-->
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+          <div class="flex flex-col ">
+            <label>Memory</label>
+            <input type="text" class="custom-styling" formControlName="memory" >
+            <!--<span *ngIf="assetForm?.get('memory')?.invalid && (assetForm?.get('memory')?.dirty || assetForm?.get('memory')?.touched)">
+              <span *ngIf="assetForm?.get('memory')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>Storage</label>
+            <input type="text" class="custom-styling" formControlName="storage" >
+            <!--<span *ngIf="assetForm?.get('storage')?.invalid && (assetForm?.get('storage')?.dirty || assetForm?.get('storage')?.touched)">
+              <span *ngIf="assetForm?.get('storage')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+
+          <div class="flex flex-col ">
+            <label>Processor</label>
+            <input type="text" class="custom-styling" formControlName="processor" >
+            <!--<span *ngIf="assetForm?.get('processor')?.invalid && (assetForm?.get('processor')?.dirty || assetForm?.get('processor')?.touched)">
+              <span *ngIf="assetForm?.get('processor')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>Operating System</label>
+            <input type="text" class="custom-styling" formControlName="operatingSystem" >
+            <!--<span *ngIf="assetForm?.get('operatingSystem')?.invalid && (assetForm?.get('operatingSystem')?.dirty || assetForm?.get('operatingSystem')?.touched)">
+              <span *ngIf="assetForm?.get('operatingSystem')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+          <div class="flex flex-col ">
+            <label>Ip Address</label>
+            <input type="text" class="custom-styling" formControlName="ipaddress" >
+            <!--<span *ngIf="assetForm?.get('ipaddress')?.invalid && (assetForm?.get('ipaddress')?.dirty || assetForm?.get('ipaddress')?.touched)">
+              <span *ngIf="assetForm?.get('ipaddress')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>Serial Number</label>
+            <input  type="text" class="custom-styling" formControlName="serialNumber"  />
+            <!--<span *ngIf="assetForm?.get('serialNumber')?.invalid && (assetForm?.get('serialNumber')?.dirty || assetForm?.get('serialNumber')?.touched)">
+              <span *ngIf="assetForm?.get('serialNumber')?.errors?.['required']">Serial Number is required</span>
+            </span>-->
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+          <div class="flex flex-col ">
+            <label>Purchase Date</label>
+            <input type="date" class="custom-styling" formControlName="purchaseDate" >
+            <!--<span *ngIf="assetForm?.get('purchaseDate')?.invalid && (assetForm?.get('purchaseDate')?.dirty || assetForm?.get('purchaseDate')?.touched)">
+              <span *ngIf="assetForm?.get('purchaseDate')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>Insurance Details</label>
+            <input type="text" class="custom-styling" formControlName="insuranceDetails" >
+            <!--<span *ngIf="assetForm?.get('insuranceDetails')?.invalid && (assetForm?.get('insuranceDetails')?.dirty || assetForm?.get('insuranceDetails')?.touched)">
+              <span *ngIf="assetForm?.get('insuranceDetails')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+          <div class="flex flex-col ">
+            <label>Licence Details</label>
+            <input type="text" class="custom-styling" formControlName="licenceDetails" >
+            <!--<span *ngIf="assetForm?.get('licenceDetails')?.invalid && (assetForm?.get('licenceDetails')?.dirty || assetForm?.get('licenceDetails')?.touched)">
+              <span *ngIf="assetForm?.get('licenceDetails')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>Licence Expiry</label>
+            <input type="date" class="custom-styling" formControlName="licenceExpiry" >
+            <!--<span *ngIf="assetForm?.get('licenceExpiry')?.invalid && (assetForm?.get('licenceExpiry')?.dirty || assetForm?.get('licenceExpiry')?.touched)">
+              <span *ngIf="assetForm?.get('licenceExpiry')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+          <div class="flex flex-col ">
+            <label>Invoice Number</label>
+            <input type="text" class="custom-styling" formControlName="invoiceNumber" >
+            <!--<span *ngIf="assetForm?.get('invoiceNumber')?.invalid && (assetForm?.get('invoiceNumber')?.dirty || assetForm?.get('invoiceNumber')?.touched)">
+              <span *ngIf="assetForm?.get('invoiceNumber')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>AMC</label>
+            <input type="text" class="custom-styling" formControlName="amc" />
+            <!--<span *ngIf="assetForm?.get('amc')?.invalid && (assetForm?.get('amc')?.dirty || assetForm?.get('amc')?.touched)">
+              <span *ngIf="assetForm?.get('amc')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+
+          <div class="flex flex-col ">
+            <label>Warranty</label>
+            <input type="text" class="custom-styling" formControlName="warranty" >
+            <!--<span *ngIf="assetForm?.get('warranty')?.invalid && (assetForm?.get('warranty')?.dirty || assetForm?.get('warranty')?.touched)">
+              <span *ngIf="assetForm?.get('warranty')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>Remarks</label>
+            <input type="text" class="custom-styling" formControlName="remarks" >
+            <!--<span *ngIf="assetForm?.get('remarks')?.invalid && (assetForm?.get('remarks')?.dirty || assetForm?.get('remarks')?.touched)">
+              <span *ngIf="assetForm?.get('remarks')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+      </div>
+      <div class="single-container">
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>Location</label>
+            <input type="text" class="custom-styling" formControlName="location" >
+            <!--<span *ngIf="assetForm?.get('location')?.invalid && (assetForm?.get('location')?.dirty || assetForm?.get('location')?.touched)">
+              <span *ngIf="assetForm?.get('location')?.errors?.['required']">UserName is required</span>
+            </span>-->
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>Tool Name</label>
+            <input type="text" class="custom-styling" formControlName="toolName"  />
+            <!--<span *ngIf="assetForm?.get('toolName')?.invalid && (assetForm?.get('toolName')?.dirty || assetForm?.get('toolName')?.touched)">
+              <span *ngIf="assetForm?.get('toolName')?.errors?.['required']">Asset Name is required</span>
+            </span>-->
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>Internal</label>
+            <div class="checkbox-input">
+              <input type="checkbox" formControlName="isInternal" />
+              <label for="isInternal">Is Internal</label>
+            </div>
+            <!--<div class="checkbox-input">
+              <input type="radio" [value]="false" formControlName="isInternal" />
+              <label for="isInternal">No</label>
+            </div>-->
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+
+          <div class="flex flex-col ">
+            <label>Serial Number</label>
+            <input type="text" class="custom-styling" formControlName="toolSerialNo"  />
+            <!--<span *ngIf="assetForm?.get(' toolSerialNo')?.invalid && (assetForm?.get(' toolSerialNo')?.dirty || assetForm?.get(' toolSerialNo')?.touched)">
+              <span *ngIf="assetForm?.get(' toolSerialNo')?.errors?.['required']">Asset Name is required</span>
+            </span>-->
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col">
+            <label>Keys </label>
+            <input type="text" class="custom-styling" formControlName="keys"  />
+            <!--<span *ngIf="assetForm?.get('keys')?.invalid && (assetForm?.get('keys')?.dirty || assetForm?.get('keys')?.touched)">
+              <span *ngIf="assetForm?.get('keys')?.errors?.['required']">Asset Name is required</span>
+            </span>-->
+          </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="login-input">
+          <div class="flex flex-col ">
+            <label>Tool status</label>
+            <div class="checkbox-input">
+              <input type="checkbox"  formControlName="toolStatus">
+              <label for="toolStatus">Is Working</label>
+            </div>
+          
+          </div>
+        </div>
+        <div class="login-input">
+          <div class="flex flex-col ">
+            <label>Tool Active</label>
+            <div class="checkbox-input">
+              <input type="checkbox"  formControlName="active">
+              <label for="active">Active</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col create-btn">
+        <button mat-raised-button class="bg-[#3db6fc;] text-white" style="gap:30px;" type="submit"><span style="color:white">Register Asset</span></button>
+        <!--<span class="mt-3"><span class="text-[#747474]">Already have an account?</span><a class="ml-2 text-[#3db6fc;]" [routerLink]="['/login']" href="">Login</a></span>-->
+      </div>
+    </div>
+  </div>
+</form>

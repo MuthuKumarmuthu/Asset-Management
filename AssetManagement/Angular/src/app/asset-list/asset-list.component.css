@@ -1,0 +1,86 @@
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-header-row {
+  background: linear-gradient(89.96deg, #65CAF9 -7.82%, #14A2FE 124.35%) !important;
+  border-radius: 12px 12px 0px 0px !important;
+  color: #ffffff !important;
+}
+
+th {
+  color: #fff !important;
+}
+
+.custom-header-id {
+  width: 50px;
+}
+
+.custom-header-id,
+.custom-cell-id {
+  width: 5%;
+}
+
+.custom-header-assetCode,
+.custom-cell-assetCode {
+  width: 10%;
+}
+
+.filter-form-field {
+  width: 450px;
+}
+
+.custom-header-assetType,
+.custom-cell-assetType {
+  width: 12%;
+}
+
+.custom-header-nameOFUser,
+.custom-cell-nameOFUser {
+  width: 14%;
+}
+
+.custom-header-assetName,
+.custom-cell-assetName {
+  width: 22%;
+}
+
+.custom-header-classification,
+.custom-cell-classification {
+  width: 8%;
+}
+
+.custom-header-assetDescription,
+.custom-cell-assetDescription {
+  width: 20%;
+}
+
+.custom-header-action,
+.custom-cell-action {
+  width: 10%;
+}
+
+.inventory-grid {
+  grid-template-columns: auto auto auto auto auto auto auto;
+}
+@screen sm {
+  .inventory-grid {
+    grid-template-columns: 22px 100px 91px 65px 74px 54px 93px;
+  }
+}
+@screen md {
+  .inventory-grid {
+    grid-template-columns: 22px 178px 188px 186px 173px 115px 128px;
+    /*178px 204px 186px 173px 115px 94px*/
+  }
+}
+@screen lg {
+  .inventory-grid {
+    grid-template-columns: 22px 178px 188px 186px 173px 115px 128px;
+  }
+}/*# sourceMappingURL=asset-list.component.css.map */

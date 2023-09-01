@@ -1,0 +1,70 @@
+.loginpage {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.login-form {
+  width: 80%;
+  height: 350px;
+  justify-content: space-around;
+  gap: 40px;
+}
+.login-input input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 300px;
+}
+td {
+  padding-right: 8px;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 300px;
+}
+.logincard {
+  width: 880px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgb(53 72 91 / 7%), 0 2px 2px rgb(0 0 0 / 1%), 0 4px 4px rgb(0 0 0 / 2%), 0 10px 8px rgb(0 0 0 / 3%), 0 15px 15px rgb(0 0 0 / 3%), 0 30px 30px rgb(0 0 0 / 4%), 0 70px 65px rgb(0 0 0 / 5%);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 560px;
+}
+.left-side-login{
+
+}
+.right-side-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn{
+    position: relative;
+    top: -20px;
+}
+
+span.custom{
+    color:red;
+}

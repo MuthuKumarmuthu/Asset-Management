@@ -1,0 +1,129 @@
+.loginpage {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.logincard {
+  width: 1100px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgb(53 72 91 / 7%), 0 2px 2px rgb(0 0 0 / 1%), 0 4px 4px rgb(0 0 0 / 2%), 0 10px 8px rgb(0 0 0 / 3%), 0 15px 15px rgb(0 0 0 / 3%), 0 30px 30px rgb(0 0 0 / 4%), 0 70px 65px rgb(0 0 0 / 5%);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    width: auto;
+    margin: 20px;
+  }
+}
+
+.login-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 160px;
+  margin-top: 5px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 5px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.login-input-container-single {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5px;
+  margin-right: 480px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
+}
+
+.login-input {
+  flex: 1;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+.login-input > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.create-btn {
+  padding: 40px;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+textarea,
+input[type=text].custom-styling,
+select,
+input[type=email],
+input[type=password],
+input[type=tel],
+input[type=url],
+input[type=date],
+input[type=checkbox],
+input[type=file],
+input[type=url] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 300px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.typetext {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 200px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+span {
+  color: red;
+}
+

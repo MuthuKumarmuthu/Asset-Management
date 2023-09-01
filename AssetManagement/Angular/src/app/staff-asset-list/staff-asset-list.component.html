@@ -1,0 +1,134 @@
+<app-nav-menu></app-nav-menu>
+<div style="display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 20px;">
+  <div style="display: flex; flex-direction: row; align-items: center;">
+    <span style="font-size: 25px;padding:25px">Asset List</span>
+    <!--<button mat-stroked-button (click)="showCard = !showCard" style="margin-left: 20px; border-radius: 8px; color: #46bbfa;"><mat-icon>filter_list</mat-icon><span style="padding-left: 10px;">Filter</span></button>-->
+  </div>
+  <div style="display: flex; flex-direction: row; ">
+
+  </div>
+  <div style="display: flex; flex-direction: row; ">
+
+  </div>
+</div>
+
+
+<!--Filter action -->
+<!--<mat-card class="example-card" style="display: flex; flex-direction: row; margin-bottom: 10px; width: 100%; justify-content: space-between;" [style.display]="showCard ? 'block' : 'none'">
+  <mat-card-header style="display: flex; flex-direction: row; ">
+    <form [formGroup]="myForm" (ngSubmit)="onFilterSubmit()" style="width: 100%;">
+      <div style="display: flex; flex-direction: row; justify-content: space-between">
+        <div style="display: flex; flex-direction: row; gap: 10px;">
+
+          <mat-form-field>
+            <label>Name of User</label>
+            <input matInput type="text" formControlName="searchNameOFUser" />
+          </mat-form-field>
+
+          <mat-form-field>
+            <label>Asset Name</label>
+            <input matInput type="text" formControlName="searchAssetName" />
+          </mat-form-field>
+
+          <mat-form-field>
+            <label>Asset Code</label>
+            <input matInput type="text" formControlName="searchAssetCode" />
+          </mat-form-field>
+        </div>
+        <div style="padding-top: 26px;">
+          <button type="submit" mat-mini-fab matTooltip="filter" style="background-color: #0F9E33; margin-right: 10px;" aria-label="Example mini fab with a heart icon">
+            <mat-icon>done</mat-icon>
+          </button>
+          <button mat-mini-fab (click)="showCard = !showCard" matTooltip="close" style="background-color: #FF5C5C;" aria-label="Example mini fab with a heart icon">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </div>
+    </form>-->
+    <!--<mat-form-field class="filter-form-field">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+    </mat-form-field>-->
+  <!--</mat-card-header>
+</mat-card>-->
+
+<div style="  margin: 20px;">
+  <div class="mat-elevation-z8">
+ 
+    <table mat-table [dataSource]="dataSource" matSort>
+    
+      <ng-container matColumnDef="code">
+        <th mat-header-cell class="custom-header-assetCode text-lg" *matHeaderCellDef mat-sort-header> <b>Asset Code</b> </th>
+        <td mat-cell class="custom-cell-assetCode" *matCellDef="let asset">  <b>{{asset.code}} </b></td>
+      </ng-container>
+
+      <ng-container matColumnDef="assetType">
+        <th mat-header-cell class="custom-header-assetType text-lg" *matHeaderCellDef mat-sort-header>Asset Type</th>
+        <td mat-cell class="custom-cell-assetType" *matCellDef="let asset"> {{asset.assetType}} </td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell class="custom-header-assetName text-lg" *matHeaderCellDef mat-sort-header> Asset Name </th>
+        <td mat-cell class="custom-cell-assetName" *matCellDef="let asset"> {{asset.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="owner">
+        <th mat-header-cell class="custom-header-assetName text-lg" *matHeaderCellDef mat-sort-header>Owner</th>
+        <td mat-cell class="custom-cell-assetName" *matCellDef="let asset"> {{asset.owner}} </td>
+      </ng-container>
+
+
+
+      <ng-container matColumnDef="user">
+        <th mat-header-cell class="custom-header-nameOFUser text-lg" *matHeaderCellDef mat-sort-header>NameOfUser</th>
+        <td mat-cell class="custom-cell-nameOFUser" *matCellDef="let asset"> {{asset.user}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vendor">
+        <th mat-header-cell class="custom-header-classification text-lg" *matHeaderCellDef>Vendor</th>
+        <td mat-cell class="custom-cell-classification" *matCellDef="let asset"> {{asset.vendor}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell class="custom-header-assetDescription text-lg" *matHeaderCellDef> Description </th>
+        <td mat-cell class="custom-cell-assetDescription" *matCellDef="let asset"> {{asset.description}} </td>
+      </ng-container>
+
+
+
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell class="custom-header-action text-lg" *matHeaderCellDef> Action </th>
+        <td mat-cell class="custom-cell-action" *matCellDef="let asset">
+          <button mat-icon-button color="primary" (click)="viewAsset(asset, asset.code)">
+            View
+          </button>
+        
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons>
+    </mat-paginator>
+
+  </div>
+</div>
+
+
+<style>
+  .mat-form-field-infix {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .table th {
+    font-weight: 500 !important;
+    font-size: 17px;
+  }
+</style>
+
+
+

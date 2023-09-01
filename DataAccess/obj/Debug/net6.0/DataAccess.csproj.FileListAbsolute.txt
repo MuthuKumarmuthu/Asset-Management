@@ -1,0 +1,17 @@
+D:\MYPROJECT\AssetManagement\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+D:\MYPROJECT\AssetManagement\DataAccess\bin\Debug\net6.0\DataAccess.runtimeconfig.json
+D:\MYPROJECT\AssetManagement\DataAccess\bin\Debug\net6.0\DataAccess.dll
+D:\MYPROJECT\AssetManagement\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+D:\MYPROJECT\AssetManagement\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+D:\MYPROJECT\AssetManagement\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+D:\MYPROJECT\AssetManagement\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+D:\MYPROJECT\AssetManagement\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\MYPROJECT\AssetManagement\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+D:\MYPROJECT\AssetManagement\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+D:\MYPROJECT\AssetManagement\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\MYPROJECT\AssetManagement\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+D:\MYPROJECT\AssetManagement\DataAccess\obj\Debug\net6.0\DataAccess.dll
+D:\MYPROJECT\AssetManagement\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+D:\MYPROJECT\AssetManagement\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+D:\MYPROJECT\AssetManagement\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
+D:\MYPROJECT\AssetManagement\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
